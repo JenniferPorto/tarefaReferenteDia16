@@ -1,24 +1,37 @@
 <html>
 <head>
-<title>Exercício 1b</title>
-</head>
-<body>
 
-<script language="javascript">
+<meta charset="utf-8">
+    <title>exercício 1</title> 
+    <script language="javascript">
 
-var s1;
+    function ExibirString()
+    {
+        var string,qde;
+        string= document.frm1.string.value;
+        qde= parseFloat(document.frm1.numero.value);
+        document.write("<table border '2'>");
 
-s1 = new String("Pitanga");
+        for (var ss = 0; ss < qde; ss++)
+      {
+        document.write("<tr><td>" + string.charAt(ss) + "</td></tr>");
+      }
 
-document.write("<table border '1'>");
+         document.write("</table>");
 
-for (var ss = 0; ss < 7; ss++)
-{
-document.write("<tr><td>" + s1.charAt(ss) + "</td></tr>");
-}
-
-document.write("</table>");
-
+    }
 </script>
-</body>
-</html>
+</head>
+    <body>
+        <form name="frm1">
+        Digite_algo: <input type="text" name="string" ><br>
+        Digite_a_quantidade_de_digitos_tem_a_palavra: <input type="number" name="numero" ><br>
+       <input type="button" value="Enviar" onclick="ExibirString();">
+        <br><br>
+        
+    
+        
+      </form>
+    </body>
+    </html>
+    
